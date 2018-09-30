@@ -1,0 +1,85 @@
+.team-member {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.team-member img {
+  margin: 0 auto;
+  border: 7px solid white;
+}
+
+.team-member h4 {
+  margin-top: 25px;
+  margin-bottom: 0;
+  text-transform: none;
+}
+
+.team-member p {
+  margin-top: 0;
+}
+
+.bg-light-gray {
+  background-color: #eeeeee;
+}
+
+section {
+  padding: 100px 0;
+}
+
+section h2.section-heading {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+section h3.section-subheading {
+  font-size: 16px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 75px;
+} 
+
+
+.navbar-default .navbar-nav > li > .go-green{
+    color: #0A3C53;
+}
+
+.navbar-default .navbar-nav > li > .go-green:hover{
+    color: #717f86;
+}
+
+.dropdown-menu>li>button{
+  margin:3px 20px;
+}
+
+.quote>a{
+  font-size: 20px;
+}
+
+.w3-container{
+  margin-bottom: 20px;
+}
+
+img.hidden
+{
+   display: none
+}
+
+.loader{
+  max-width: 30px;
+  position: absolute;
+  right: 65px;
+  margin-top: 5px
+}
+
+.navbar-logo{
+  width: 200px;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 150px 0;
+  }
+}
