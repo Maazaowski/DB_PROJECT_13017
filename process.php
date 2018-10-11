@@ -247,7 +247,7 @@
 
 			$pass = md5($password);
 
-			$query = "SELECT userID, password FROM USERS_13017 WHERE userID=$userID";
+			$query = "SELECT * FROM USERS_13017 WHERE userID=$userID";
 			$response = @mysqli_query($dbc, $query);
 
 			if ($response) {
@@ -256,8 +256,10 @@
 				if($row['userID'] = $userID && $row['password'] == $pass)
 				{
 					$_SESSION['userID'] = $userID;
-					
-				 	header('location: index.php');
+					if($row['salesPerson'] != 1)
+					 header('location: index.php');
+					else
+					 header('location: invoice.php');
 				}
 				else
 				{
@@ -705,6 +707,21 @@
 
 	//-----ASSIGN CUSTOMER TO SALESPERSON ENDS-----
 
+
+
+	//-----DELETING FOR INVOICE STARTS-----
+	if (isset($_GET['delInv']))
+	{
+		$orderID = $_GET['delInv'];
+		$response = mysqli_query($dbc, "DELETE FROM ORDER_13017 WHERE orderID=$orderID");
+		if($response)
+		$_SESSION['success_msg'] = "Order Removed";
+	else
+		$_SESSION['error_msg'] = "An error has occured!";
+				 header('location: invoice.php');
+	}
+
+	//-----DELETING FOR INVOICE ENDS-----
 
 
 

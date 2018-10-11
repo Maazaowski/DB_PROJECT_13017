@@ -2,7 +2,13 @@
 	include('layouts/header.php');
 
 	include('process.php'); 
-	require_once('mysqli_connect.php');
+    require_once('mysqli_connect.php');
+    
+    if (!isset($_SESSION['userID']))
+	{
+		header('location: login.php');
+	}
+
 
 echo '<style>
 table {

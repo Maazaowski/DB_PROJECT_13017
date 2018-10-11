@@ -48,7 +48,7 @@ if (isset($_SESSION['userID']))
 }
 else
 {
-	echo '<h1>WELCOME TO MY DATABASE PROJECT!</h1>';
+	header('location: login.php');
 }
 
 
