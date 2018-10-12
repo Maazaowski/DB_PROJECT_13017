@@ -5,6 +5,7 @@
 	require_once('mysqli_connect.php');
 
 	$SPID = 0;
+	$tototal = 0;
 	$shopName = '';
 	$address = '';
 	$contactNo = '';
@@ -220,6 +221,14 @@ if (isset($_GET['inv']))
 	$response22 = @mysqli_query($dbc, $query2);
 	$response3 = @mysqli_query($dbc, $query3);
 	$responseP = @mysqli_query($dbc, $queryP);
+	$responseT = @mysqli_query($dbc, $query3);
+
+	while ($rowT = mysqli_fetch_array($responseT)){
+		$tototal = $tototal + $rowT['total'];
+
+	}
+
+	
 
 	$row22 = mysqli_fetch_array($response22);
 	$shopName = $row22['shopName'];
@@ -394,6 +403,14 @@ if (isset($_GET['inv'])) {
 			'<a href ="process.php?delInv='.$row3['orderID'].'"><button class = "btn btn-danger">Delete</a></button></td></tr>';	
 			
 		}
+
+		echo '<tr><td align = "middle"></td>
+		<td align = "middle"></td>
+		<td align = "middle"></td>
+		<td align = "middle"></td>
+		<td align = "middle"></td>
+		<td align = "middle">Total:</td>
+		<td align = "middle">'.$tototal.'</td><tr>';
 
 		?>
 
