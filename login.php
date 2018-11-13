@@ -1,6 +1,6 @@
 <?php
 
-include ('layouts/header.php');
+//include ('layouts/header.php');
 include ('process.php');
 if (isset($_SESSION['success_msg']))
     {

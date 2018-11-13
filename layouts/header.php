@@ -37,6 +37,8 @@ include('process.php');
         <li><a href="salesperson.php">Salesperson</a></li>
         <li><a href="products.php">Products</a></li>
         <li><a href="users.php">Users</a></li>
+        <li><a href="invoice.php">Invoice</a></li>
+        <li><a href="survey.php">Survey</a></li>
          
 
           <?php
@@ -62,17 +64,8 @@ include('process.php');
           {
           	echo '<li class="btn-trial"><a href="login.php">Login</a></li>';
           }
-
           ?>
-
-              
-             
-            
-             
-
-                  
-                
-         
+          
         </ul>
       </div>
     </div>

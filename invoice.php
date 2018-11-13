@@ -381,8 +381,8 @@ if (isset($_GET['inv'])) {
 <table align = "middle" cellspacing="5" cellpadding="8">
 	<tr><th align="middle"><b>Customer ID</b></th>
 	<th align = "middle"><b>Order ID</b></th>
-	<th align="middle"><b>Brand</b></th>
 	<th align="middle"><b>Product ID</b></th>
+	<th align="middle"><b>Brand</b></th>
 	<th align="middle"><b>Quantity</b></th>
 	<th align="middle"><b>Rate</b></th>
 	<th align="middle"><b>Total</b></th>
